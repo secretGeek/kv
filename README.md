@@ -1,12 +1,12 @@
 # KV
 
-Simple Key Value store db, available from the commandline.
+Simple Key Value store, a NO-SQL database, available from the commandline.
 
 Tiny little console app to demonstrate `IStashy`
 
 IStashy is the simplest possible no-sql database, it need not scale to millions of objects -- but is just right for a lot of projects.
 
-I wrote this a decade or so back and still use it as a place to store and retrieve snippets.
+I wrote this long long ago, and forgot about it, then found it again, and now, 10+ years later, still use it every day.
 
 ## Usage
 
@@ -27,21 +27,17 @@ I wrote this a decade or so back and still use it as a place to store and retrie
 	kv -r name
 		will remove the key 'name' (and its value) from your store
 
-
 ## Save and retrieve a value:
-
 
 Teaching by example, if you run this command:
 
 	kv someKey some other stuff
 
-^^ `kv` will store the value `some other stuff` against the key `someKey`
+^^ `kv` will store the value `some other stuff` against the key "someKey"
 
-If you then type, `kv someKey` -- you will get the result:  `some other stuff` displayed on the commandline, *and* copied directly to your clipboard.
-
+If you then type, `kv someKey` -- you will get the result:  "some other stuff" displayed on the commandline, *and* copied directly to your clipboard.
 
 The keys and values are stored in a file, not just in memory. So they are "permanent".
-
 
 ## List all of the available keys...
 
@@ -49,19 +45,14 @@ Just:
 
 	kv
 
-
 Or --
 
 	kv *
 
-
 ## Delete a Key (and its value)
-
 
 	kv -r myKey
 
-...will remove the key 'myKey' (and its value) from your store FOREVER.
+...will remove the key "myKey" (and its value) from your store FOREVER.
 
 There's no backup. There's no undo. Just digital oblivion.
-
-

@@ -22,7 +22,7 @@
                 xsZer.Serialize(writer, t1);
             }
         }
-        
+
         public T1 Load<T1>(string id) where T1 : new()
         {
             var xmlFileName = GetFileName<T1>(id);
@@ -56,7 +56,7 @@
                 yield return Path.GetFileName(f).DecodeFileNameString();
             }
         }
-        
+
         public IEnumerable<T1> LoadAll<T1>() where T1 : new()
         {
             var xmlFilePath = GetObjectPath<T1>();
@@ -94,15 +94,10 @@
         }
 
         public static string BasePath()
-        {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "kv");
-        }
-        
-        private static string GetObjectPath<T1>()
-        {
-            return Path.Combine(BasePath(), typeof(T1).ToString().ToFolderNameString());
-        }
+        => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "kv");
 
+        private static string GetObjectPath<T1>()
+        => Path.Combine(BasePath(), typeof(T1).ToString().ToFolderNameString());
         private static string GetFileName<T1>(string id)
         => Path.Combine(GetObjectPath<T1>(), id.EncodeFileNameString());
 
@@ -132,28 +127,28 @@
 
             return self;
         }
-        
+
         public static string ToFolderNameString(this string self)
         => self.Replace(Path.GetInvalidPathChars(), '_');
 
         public static string EncodeFileNameChar(this string self, char c)
         => self.Replace(c.ToString(), "[" + ((int)c).ToString() + "]");
-        
+
         public static string DecodeFileNameChar(this string self, char c)
         => self.Replace("[" + ((int)c).ToString() + "]", c.ToString());
-        
+
         public static string EncodeFileNameString(this string self)
         {
             var invalidChars = Path.GetInvalidFileNameChars();
 
-            self = self.EncodeFileNameChar('['); 
+            self = self.EncodeFileNameChar('[');
 
             foreach (var c in invalidChars)
             {
-                self = self.EncodeFileNameChar(c); 
+                self = self.EncodeFileNameChar(c);
             }
 
-            return self; 
+            return self;
         }
 
         public static string DecodeFileNameString(this string self)

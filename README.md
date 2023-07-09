@@ -1,12 +1,20 @@
 # KV
 
+> I wrote this long long ago, and forgot about it, then found it again, and now, 10+ years later, still use it every day.
+>
+> -- 2023
+
 Simple Key Value store, a NO-SQL database, available from the commandline.
+
+Original blog post launching it is here: 
+
+
+ - [kv can remember it for you, wholesale](https://secretgeek.net/kv)
 
 Tiny little console app to demonstrate `IStashy`
 
 IStashy is the simplest possible no-sql database, it need not scale to millions of objects -- but is just right for a lot of projects.
 
-I wrote this long long ago, and forgot about it, then found it again, and now, 10+ years later, still use it every day.
 
 ## Usage
 
@@ -56,3 +64,8 @@ Or --
 ...will remove the key "myKey" (and its value) from your store FOREVER.
 
 There's no backup. There's no undo. Just digital oblivion.
+
+
+## See also
+
+- [kv can remember it for you, wholesale](https://secretgeek.net/kv)

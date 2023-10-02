@@ -1,4 +1,4 @@
-# KV
+# KV - console Key Value store
 
 > I wrote this long long ago, and forgot about it, then found it again, and now, 10+ years later, still use it every day.
 >
@@ -9,9 +9,13 @@ Simple Key Value store, a NO-SQL database, available from the commandline.
 Original blog post launching it is here: 
 
 
- - [kv can remember it for you, wholesale](https://secretgeek.net/kv)
+- [kv can remember it for you, wholesale](https://secretgeek.net/kv)
 
 Tiny little console app to demonstrate `IStashy`
+
+More about IStashy here:
+
+- [Stashy is a Really simple Key Value store](https://secretgeek.net/stashy_gist)
 
 IStashy is the simplest possible no-sql database, it need not scale to millions of objects -- but is just right for a lot of projects.
 
@@ -65,8 +69,8 @@ Or --
 
 There's no backup. There's no undo. Just digital oblivion.
 
-
 ## See also
 
+- [Stashy is a Really simple Key Value store](https://secretgeek.net/stashy_gist)
 - [kv can remember it for you, wholesale](https://secretgeek.net/kv)
 - [kp: console passwords](https://github.com/secretGeek/kp)

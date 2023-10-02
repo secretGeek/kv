@@ -69,3 +69,4 @@ There's no backup. There's no undo. Just digital oblivion.
 ## See also
 
 - [kv can remember it for you, wholesale](https://secretgeek.net/kv)
+- [kp: console passwords](https://github.com/secretGeek/kp)
